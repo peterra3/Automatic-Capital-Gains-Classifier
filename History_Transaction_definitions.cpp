@@ -279,6 +279,8 @@ void History::sort_by_date() {
 				while ((p_temp2->get_next() != nullptr) && !(*p_temp1 < *(p_temp2->get_next()))) {
 					p_temp2 = p_temp2->get_next();
 				}
+
+		
 				//now p_temp1 node get next is pointing to the node with greater value
 				p_temp1->set_next(p_temp2->get_next());
 
@@ -312,13 +314,8 @@ void History::update_acb_cgl() {
 			share_balance += p_temp->get_shares();
 		}
 		else {
-			//edge case
-			if (p_temp == p_head) {
-				share_balance += p_temp->get_shares();
-			}
-			else {
 				share_balance -= p_temp->get_shares();
-			}
+			
 		}
 		p_temp->set_share_balance(share_balance);
 
