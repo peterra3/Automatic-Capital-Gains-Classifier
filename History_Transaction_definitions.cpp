@@ -39,7 +39,7 @@ Transaction::Transaction(std::string ticker_symbol, unsigned int day_date,
 	// These private members have to be populated so for now put placeholder values on them
 	this->acb = 0;
 	this->acb_per_share = 0;
-	
+
 	this->share_balance = 0;
 	this->cgl = 0;
 
@@ -56,10 +56,10 @@ Transaction::~Transaction() {
 // Overloaded < operator.
 //
 bool Transaction::operator<(Transaction const& other) {
-//compares dates or variables for each class
-//return true if one transaction is bigger than other
-//false if it smaller
-//if (my_first_transaction < my_second_transaction)
+	//compares dates or variables for each class
+	//return true if one transaction is bigger than other
+	//false if it smaller
+	//if (my_first_transaction < my_second_transaction)
 
 	if (this->year < other.year) {
 		return true;
@@ -85,12 +85,9 @@ bool Transaction::operator<(Transaction const& other) {
 	}
 
 	if (this->day == other.day) {
-		if (this->trans_id > other.trans_id) {
-			return true;
-		}
-		else {
+	
 			return false;
-		}
+		
 
 	}
 }
@@ -149,7 +146,7 @@ void Transaction::print() {
 
 
 History::History() {
-	
+
 
 	p_head = nullptr;
 }
