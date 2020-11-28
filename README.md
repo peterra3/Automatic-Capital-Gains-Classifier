@@ -1,3 +1,4 @@
 # Automatic-Capital-Gains-Classifier
 ETF activity documentation code that implements adjusted cost base (ACB) reporting for capital gain/loss of portfolio. 
 
+***FINALIZED COPY
