@@ -248,19 +248,15 @@ void History::sort_by_date() {
 	Transaction* p_sorted{ nullptr };
 
 	if ((p_head == nullptr) || (p_head->get_next() == nullptr)) {
-
+		p_temp1 = nullptr;
 	}
 	else {
-
-
 		//p_temp1 and 2 
 		p_sorted = p_head;
 		p_head = p_head->get_next();
 		p_sorted->set_next(nullptr);
 
 		//the start of a new linked list	
-
-
 		while (p_head != nullptr) {
 
 			p_temp1 = p_head;
@@ -280,7 +276,7 @@ void History::sort_by_date() {
 					p_temp2 = p_temp2->get_next();
 				}
 
-		
+
 				//now p_temp1 node get next is pointing to the node with greater value
 				p_temp1->set_next(p_temp2->get_next());
 
@@ -293,7 +289,7 @@ void History::sort_by_date() {
 		p_temp2 = nullptr;
 		p_sorted = nullptr;
 	}
-	p_temp1 = nullptr;
+	
 }
 
 
