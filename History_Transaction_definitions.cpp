@@ -5,6 +5,7 @@
 #include <iomanip>
 #include <iostream>
 
+
 #include "project4.hpp"
 #include "History.hpp"
 #include "Transaction.hpp"
@@ -313,6 +314,14 @@ void History::update_acb_cgl() {
 				share_balance -= p_temp->get_shares();
 			
 		}
+
+		//for if a unsigned int value is assigned an signed int value 
+		if (share_balance < 0) {
+			throw std::underflow_error{
+				"The number of shares sold exceeded the number of shares currently in the account. Recheck the input."
+			};
+		}
+
 		p_temp->set_share_balance(share_balance);
 
 
